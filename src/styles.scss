@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #3498db;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +23,27 @@ h1, h2, h4, h5, h6 {
   margin: 0;
 }
 
+.text-divider-primary {
+  width: 100%;
+  border-bottom: #3498db solid 1px;
+}
+
+.text-color-primary {
+  color: #3498db;
+}
+
+.text-xxxl {
+  font-size: 4rem;
+}
+
+.text-xxl {
+  font-size: 3rem;
+}
+
+.text-xl {
+  font-size: 2rem;
+}
+
 .text-lg {
   font-size: 1.5rem;
 }
@@ -33,4 +58,8 @@ h1, h2, h4, h5, h6 {
 
 .text-s {
   font-size: 0.875rem;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
