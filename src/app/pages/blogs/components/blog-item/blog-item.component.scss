@@ -1,0 +1,54 @@
+.blog-card {
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.2rem;
+  min-height: 5rem;
+  border: 1px solid #1DA1F2;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    white-space: pre-wrap;
+    width: 8rem;
+    background: #1DA1F2;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  &__information{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    &__header {
+      font-size: 1.5rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &--title {
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+
+    &--about {
+      font-weight: bolder;
+    }
+
+  }
+}
