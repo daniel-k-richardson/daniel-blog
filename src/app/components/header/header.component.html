@@ -5,6 +5,9 @@
       <li class="header__nav__ul__item" routerLink="">Home</li>
       <li class="header__nav__ul__item" routerLink="about">About</li>
       <li class="header__nav__ul__item" routerLink="blogs">Blog</li>
+@if (this.isLoggedIn()) {
+  <li class="header__nav__ul__item" (click)="onLogout()">Logout</li>
+}
     </ul>
   </nav>
 </header>

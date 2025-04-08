@@ -18,4 +18,8 @@ export const routes: Routes = [
     path: 'blog/:id',
     loadComponent: () => import('./pages/blogs/blog/blog.component').then(m => m.BlogComponent)
   },
+  {
+    path: 'admin',
+    loadComponent: () => import('./pages/admin/admin.component').then(m => m.AdminComponent)
+  }
 ];
