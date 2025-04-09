@@ -1,0 +1,66 @@
+.admin {
+
+  &__title {
+    padding-bottom: 0.5rem;
+    border-bottom: #3498db solid 1px;
+  }
+
+  &__form {
+    border: #7f8c8d solid 1px;
+    width: 35%;
+    margin: 5rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box; // Ensures padding is included in width
+    overflow: hidden; // Prevents content from escaping
+
+    &__button {
+      display: flex;
+      justify-content: center;
+
+      &__submit {
+        margin-top: 2rem;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+      }
+    }
+
+    &__form-group {
+      display: flex;
+      flex-wrap: wrap; // Allows wrapping when the container is too small
+      justify-content: space-between;
+      align-items: center;
+      margin: .5rem 0;
+
+      label {
+        font-weight: bold;
+        flex: 1 1 40%; // Allows the label to shrink and wrap
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal; // Allows wrapping
+        margin-bottom: 0.5rem; // Adds spacing when wrapping
+      }
+
+      input {
+        flex: 1 1 55%; // Allows the input to shrink and wrap
+        padding: 0.5rem;
+        border: #7f8c8d solid 1px;
+        border-radius: 0.3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+}

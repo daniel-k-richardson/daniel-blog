@@ -1,0 +1,19 @@
+<section class="admin">
+  <h1 class="admin__title">Admin</h1>
+  <form class="admin__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2 class="admin__form__title">Login</h2>
+    <div class="admin__form__form-group">
+      <label class="admin__from__form-group__label" for="username">Username:</label>
+      <input class="admin__from__form-group__input" type="text" id="username" name="username"
+             placeholder="Enter username.." formControlName="username" required>
+    </div>
+    <div class="admin__form__form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password.." formControlName="password"
+             required>
+    </div>
+    <div class="admin__form__button">
+      <button type="submit" class="admin__form__button__submit">Login</button>
+    </div>
+  </form>
+</section>

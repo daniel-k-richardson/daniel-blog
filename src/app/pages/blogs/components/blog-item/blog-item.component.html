@@ -1,8 +1,10 @@
 <div class="blog-card" [routerLink]="['/blog', blog().id]">
   <P class="blog-card__date"> {{ blog().createdAt | date:'EEEE MMMM yyyy' }}</P>
   <div class="blog-card__information">
-    <p class="blog-card__information__header"><span class="blog-card__information--title">Title:</span> {{blog().title }}</p>
-    <p class="blog-card__information__description"><span class="blog-card__information--about">About:</span> {{blog().content | truncate:20}}</p>
+    <p class="blog-card__information__header"><span
+      class="blog-card__information--title">Title:</span> {{ blog().title }}</p>
+    <p class="blog-card__information__description"><span
+      class="blog-card__information--about">About:</span> {{ blog().content | truncate:20 }}</p>
   </div>
 </div>
 

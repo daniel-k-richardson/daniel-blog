@@ -1,9 +1,13 @@
-
 <section class="blogs">
+
   <div class="blogs__header">
     <h1 class="blogs__header__title">Blogs</h1>
     <form class="blogs__header__search">
-      <input class="blogs__header__search__input" name="searchTerm" [(ngModel)]="searchTerm" type="text" placeholder="Search blogs..." />
+      <input
+        class="blogs__header__search__input"
+        name="searchTerm" [(ngModel)]="searchTerm"
+        type="text"
+        placeholder="Search blogs..."/>
     </form>
   </div>
 
@@ -12,11 +16,15 @@
       <p>No blogs available</p>
     </div>
   }
+@if (isLoggedIn()) {
+  <button (click)="openModal()"> open modal</button>
+
+}
 
   <div class="blogs__list">
-    @for(blog of blogs() | filterBlogs : searchTerm(); track blog.id) {
+    @for (blog of blogs() | filterBlogs : searchTerm(); track blog.id) {
       <div class="blogs__item">
-        <app-blog-item [blog]="blog" />
+        <app-blog-item [blog]="blog"/>
       </div>
     }
   </div>

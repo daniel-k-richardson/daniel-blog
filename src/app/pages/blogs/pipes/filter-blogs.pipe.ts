@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 import {Blog} from '../../../models/blog.type';
 
 @Pipe({
@@ -7,7 +7,7 @@ import {Blog} from '../../../models/blog.type';
 export class FilterBlogsPipe implements PipeTransform {
 
   transform(blogs: Blog[], search: string): Blog[] {
-    if (!search){
+    if (!search) {
       return blogs;
     }
 

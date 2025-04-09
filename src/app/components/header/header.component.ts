@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, effect, inject, signal} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
 import {LoginService} from '../../services/login.service';
@@ -15,7 +15,9 @@ export class HeaderComponent {
   isLoggedIn = signal(false);
 
   constructor() {
-    this.isLoggedIn.set(this.authService.isLoggedIn());
+    effect(() => {
+      this.isLoggedIn.set(this.authService.isLoggedIn());
+    });
   }
 
   onLogout() {

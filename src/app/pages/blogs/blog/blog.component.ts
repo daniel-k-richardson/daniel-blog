@@ -15,14 +15,14 @@ import {DatePipe} from '@angular/common';
 export class BlogComponent implements OnInit {
   route: ActivatedRoute = inject(ActivatedRoute);
   blogService: BlogService = inject(BlogService);
+
   blog = signal<Blog | undefined>(undefined);
   blogId: string = '';
 
   ngOnInit() {
-
     this.blogId = String(this.route.snapshot.params['id']);
     this.blogService.getBlog(this.blogId)
-      .subscribe((blog:Blog) => this.blog.set(blog)
-    );
+      .subscribe((blog: Blog) => this.blog.set(blog)
+      );
   }
 }
